@@ -1,0 +1,5 @@
+git init
+git add .
+git commit -m "Actualización de la página Fashion & Trends"
+git remote add origin https://github.com/guerrero28/fashion-trends.git
+git push -u origin master
