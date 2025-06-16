@@ -1,48 +1,75 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>D'Guerrero | Tienda de Ropa</title>
+  <title>Fashion & Trends</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="app.js"></script>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">D'Guerrero</div>
-    <ul class="nav-links">
-      <li><a href="#">Mujer</a></li>
-      <li><a href="#">Hombre</a></li>
-      <li><a href="#">Niños</a></li>
-      <li><a href="#">Rebajas</a></li>
-    </ul>
-    <div class="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></div>
-  </nav>
-  <header class="hero">
-    <div class="hero-text">
-      <h1>Explora la Nueva Colección</h1>
-      <p>Estilo urbano, minimalista y fresco</p>
-      <button>Comprar Ahora</button>
-    </div>
+  <header>
+    <h1>Fashion & Trends</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#" onclick="mostrarCarrito()">🛒 Carrito (<span id="contador">0</span>)</a></li>
+      </ul>
+    </nav>
   </header>
-  <section class="products">
-    <h2>Productos Destacados</h2>
-    <div class="product-grid" id="product-list"></div>
+
+  <section id="inicio" class="banner">
+    <h2>Estilo que marca tendencia</h2>
+    <p>Descubre nuestra colección urbana y deportiva</p>
   </section>
-  <div id="cart" class="cart">
-    <h3>Carrito de compras</h3>
-    <ul id="cart-items"></ul>
-    <p>Total: <span id="cart-total">€0.00</span></p>
-    <button onclick="checkout()">Finalizar Compra</button>
-  </div>
-  <footer>
-    <p>&copy; 2025 D'Guerrero. Todos los derechos reservados.</p>
-    <div class="socials">
-      <a href="#">Instagram</a> | 
-      <a href="#">Facebook</a> | 
-      <a href="#">Contacto</a>
+
+  <section id="productos" class="catalogo">
+    <h2>Nuestros Productos</h2>
+    <div class="productos-grid">
+      <div class="producto">
+        <img src="https://via.placeholder.com/200" alt="Polera Oversize" />
+        <h3>Polera Oversize</h3>
+        <p>S/. 59.90</p>
+        <button onclick="agregarAlCarrito('Polera Oversize', 59.90)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://via.placeholder.com/200" alt="Jogger Urbano" />
+        <h3>Jogger Urbano</h3>
+        <p>S/. 79.90</p>
+        <button onclick="agregarAlCarrito('Jogger Urbano', 79.90)">Agregar al carrito</button>
+      </div>
+      <div class="producto">
+        <img src="https://via.placeholder.com/200" alt="Zapatilla Sport" />
+        <h3>Zapatilla Sport</h3>
+        <p>S/. 119.90</p>
+        <button onclick="agregarAlCarrito('Zapatilla Sport', 119.90)">Agregar al carrito</button>
+      </div>
     </div>
+  </section>
+
+  <section id="nosotros" class="nosotros">
+    <h2>Sobre Nosotros</h2>
+    <p>En Fashion & Trends nos apasiona la moda urbana y deportiva. Ofrecemos prendas con estilo latino, calidad y actitud. ¡Gracias por ser parte del flow!</p>
+  </section>
+
+  <section id="contacto" class="contacto">
+    <h2>Contáctanos</h2>
+    <p>WhatsApp: <a href="https://wa.me/51916446345" target="_blank">916 446 345</a></p>
+    <p>Instagram: <a href="https://instagram.com/fashiontrends" target="_blank">@fashiontrends</a></p>
+  </section>
+
+  <section id="carrito" class="carrito">
+    <h2>Tu Carrito</h2>
+    <ul id="lista-carrito"></ul>
+    <p id="total">Total: S/. 0.00</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Fashion & Trends. Todos los derechos reservados.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
